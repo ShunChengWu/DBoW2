@@ -1,0 +1,2 @@
+@PACKAGE_INIT@
+include("@PACKAGE_DBoW2_install_cmake_dir@/DBoW2Targets.cmake")
