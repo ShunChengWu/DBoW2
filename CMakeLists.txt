@@ -50,7 +50,7 @@ set(${targetname}_config_version            ${${targetname}_config_dir}/${target
 
 
 #MESSAGE("${targetname}_install_cmake_dir: " ${${targetname}_install_cmake_dir})
-#MESSAGE("${targetname}_install_include_dir: " ${${targetname}_install_include_dir})
+MESSAGE("${targetname}_install_include_dir: " ${${targetname}_install_include_dir})
 #MESSAGE("${targetname}_config_dir: " ${targetname}_config_dir)
 #MESSAGE("${targetname}_config: " ${targetname}_config)
 #MESSAGE("${targetname}_config_version: " ${${targetname}_config_version})
@@ -61,6 +61,8 @@ target_include_directories(DBoW2
 	PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
 	PUBLIC $<INSTALL_INTERFACE:${${targetname}_install_include_dir}>
 )
+add_library(DBoW2::DBoW2 ALIAS DBoW2)
+
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     ${DBoW2_config_version}
@@ -93,6 +95,7 @@ install(
 # Export targets and install them
 install(TARGETS ${targetname}
     EXPORT ${targetname}Targets
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 install(EXPORT ${targetname}Targets
     FILE ${targetname}Targets.cmake
