@@ -50,7 +50,7 @@ set(${targetname}_config_version            ${${targetname}_config_dir}/${target
 
 
 #MESSAGE("${targetname}_install_cmake_dir: " ${${targetname}_install_cmake_dir})
-MESSAGE("${targetname}_install_include_dir: " ${${targetname}_install_include_dir})
+#MESSAGE("${targetname}_install_include_dir: " ${${targetname}_install_include_dir})
 #MESSAGE("${targetname}_config_dir: " ${targetname}_config_dir)
 #MESSAGE("${targetname}_config: " ${targetname}_config)
 #MESSAGE("${targetname}_config_version: " ${${targetname}_config_version})

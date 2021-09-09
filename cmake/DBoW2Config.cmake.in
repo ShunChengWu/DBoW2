@@ -1,2 +1,5 @@
 @PACKAGE_INIT@
 include("@PACKAGE_DBoW2_install_cmake_dir@/DBoW2Targets.cmake")
+SET(DBoW2_FOUND true)
+SET(DBoW2_INCLUDE_DIR  @PACKAGE_DBoW2_install_cmake_dir@/include)
+check_required_components("DBoW2")
