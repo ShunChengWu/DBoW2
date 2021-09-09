@@ -75,6 +75,7 @@ configure_package_config_file(
 )
 
 # Install config files
+install(DIRECTORY DESTINATION ${CMAKE_INSTALL_PREFIX})
 install(FILES ${${targetname}_config} ${${targetname}_config_version}
     DESTINATION ${${targetname}_install_cmake_dir}
 )
